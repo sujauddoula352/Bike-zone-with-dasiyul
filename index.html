@@ -1,52 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Zone</title>
+    <!-- Tailwind and Daisy UI Cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- tailwind custom classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  clifford: '#da373d',
+                 'bike-primary': '#E76F51',
+                 'bike-primary-bg': 'rgba(231, 111, 81, 0.10)',
+               
+                }
+              }
+            }
+          }
+    </script>
+
+    <!-- Custom Style -->
+
+
+
+
+
+
+    <style>
+        .font-Poppins{
+          font-family: 'Poppins', 'sans-serif';
+        
+        }
+    </style>
 </head>
-<body>
-    <header>
+
+
+<body class="font-Poppinss lg:p-40 lg:py-0">
+    <header class="md:container md:max-auto">
         <nav>
             <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                <div class="flex-1">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] text-base p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>Nows</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Home</a></li>
-                      <li><a>Shop</a></li>
-                      <li><a>Nows</a></li>
-                      <li><a>Contact</a></li>
-                    </ul>
-                  </div>
-                  <a class="btn btn-ghost">Biker Zone</a>
+                    <a class="btn btn-ghost text-4xl">Biker Zone</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>Shop</a></li>
-                    <li><a>Nows</a></li>
-                  </ul>
+                    <ul class="menu text-base menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>Nows</a></li>
+                    </ul>
                 </div>
-                <div class="navbar-end">
-                  <a class="btn btn-secondary">Login</a>
+                <div class="">
+                    <a class="btn  bg-bike-primary text-white">Login</a>
                 </div>
-              </div>
+            </div>
         </nav>
+        <!-- Slider or Carousel -->
+        <div class="carousel w-full">
+            <!-- Slider -->
+            <div id="slide1" class="carousel-item lg:h-[500px] relative w-full bg-bike-primary-bg">
+                <div class="flex  flex-col lg:flex-row gap-20 p-4 lg:p-24 ">
+                    <div class="space-y-7 flex-1">
+                        <h1 class="lg:text-4xl text-xl font-bold m-4">Kawasaki Z900RS
+            <br> 
+            with Smile</h1>
+                        <p class="text-xs  w-[250px] lg:w-[400px] m-4">Lifestyle ohne Fake. Die perfekte Modern Classic Kombination aus Oldschool-Look mit den
+                          neuesten Errungenschaften und Innovationen der Technik. Die Z900RS SE ist die Antwort
+                          auf all diese Anforderungen der heutigen Straßen. Dieses Bike hat einen
+                          Öhlins-Dämpfer erhalten, sowie eine überarbeitete Gabel. Der Spirit ist klar
+                          an die Legende der 1970er angelegt, die Kawasaki Z1. Die Z900RS SE ist
+                          nicht nur eine Homage an jenes Bike, sondern technisch einfach
+                          up-to-date.</p>
+                        <button class="btn bg-bike-primary text-white ml-4">Purchase</button>
+                    </div>
+                    <div class="flex-1">
+                        <img src="./images/slider/bike1.png" class=" w-[250px]  mb-0 pb-5 lg:w-[400px]" />
+                    </div>
+                </div>
+                <div class="absolute flex  transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+             <!-- Slider 1 -->
+             <div id="slide2" class="carousel-item lg:h-[500px] relative w-full bg-bike-primary-bg">
+              <div class="flex  flex-col lg:flex-row gap-20 p-4 lg:p-24 ">
+                  <div class="space-y-7 flex-1">
+                      <h1 class="lg:text-4xl text-xl font-bold m-4">Ducati Monster 620 
+          <br> 
+          from Prague</h1>
+                      <p class="text-xs  w-[250px] lg:w-[400px] m-4">This is a custom-made construction for a customer,” says Matěj. “The instructions were clear-to build a very minimalist machine based on a Ducati monster with as little comfort as possible. We have selected the most interesting parts from several Ducati and combined them in our idea of the ultimate fun machine.”
+                        With such a letter, we knew that this monster would look wild even before the photos were uploaded. And we were not disappointed. Gas & Oil started with an original 2005 Ducati Monster 620, but when it was finished, all that was left was the frame, the engine and the front forks of the donor wheel.</p>
+                      <button class="btn bg-bike-primary text-white ml-4">Purchase</button>
+                  </div>
+                  <div class="flex-1">
+                      <img src="./images/slider/bike2.png" class=" w-[250px]  mb-0 pb-5 lg:w-[400px]" />
+                  </div>
+              </div>
 
-
-
+           <div class="absolute flex  transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- Slider 2 -->
+            <div id="slide3" class="carousel-item lg:h-[500px] relative w-full bg-bike-primary-bg">
+              <div class="flex flex-col lg: lg:flex-row gap-20 p-4 lg:p-24 ">
+                  <div class="space-y-7 flex-1">
+                      <h1 class="lg:text-4xl text-xl font-bold m-4">Daytona 675 Colors for 2010
+          <br> 
+          with Smile</h1>
+                      <p class="text-xs  w-[250px] lg:w-[400px] m-4">It was interesting looking at posts from 2007-2008 where people were asking for a white Daytona like the previous gen. Then to much surprise, Triumph releases a White special edition in 2009 as a 2010 model. So I'd like to think that Triumph trolls this forum a bit (I know ... wishful thinking).
+                     I don't have a 675 yet (saving cash for a 2nd gen). I am quite confident that if Triumph does not change anything on the bike in 2010, they will at least add 1 or 2 more color options for 2010.</p>
+                      <button class="btn bg-bike-primary text-white ml-4">Purchase</button>
+                  </div>
+                  <div class="flex-1">
+                      <img src="./images/slider/bike3.png" class=" w-[250px] mb-0 pb-5 lg:w-[400px]" />
+                  </div>
+              </div>
+                <div class="absolute flex  transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- Slider 3 -->
+             <div id="slide4" class="carousel-item lg:h-[500px] relative w-full bg-bike-primary-bg">
+              <div class="flex flex-col  lg:flex-row gap-20 p-4 lg:p-24 ">
+                  <div class="space-y-7 flex-1">
+                      <h1 class="lg:text-4xl text-xl font-bold m-4">Yamaha XSR 900 - RACER
+          <br> 
+          PAKET XSR900 RN80
+          </h1>
+                      <p class="text-xs  w-[250px] lg:w-[400px] m-4">Aus dem Englischen übersetzt-Die Yamaha XSR900 ist ein universelles japanisches Motorrad im Neo-Retro-Standard, das einen 847-cm³-Quer-Reihen-Triple-Motor verwendet. Die 2016 eingeführte XSR900 ist von Yamahas MT-09 abgeleitet.</p>
+                      <button class="btn bg-bike-primary text-white ml-4">Purchase</button>
+                  </div>
+                  <div class="flex-1">
+                      <img src="./images/slider/bike4.png"class=" w-[250px]  mb-0 pb-5 lg:w-[400px]"/>
+                  </div>
+              </div>
+                <div class="absolute flex  transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
     </header>
-    <main>
 
 
+
+    <main class="md:container md:max-auto">
+      <!-- Featured Bikes  -->
+     <section> 
+     </section>
+     <!-- latest bike -->
+     <section class="my-24">
+      <h2 class="text-5xl font-semibold text-center"> Latest Bikes</h2>
+      <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-12">
+        <!-- first card -->
+        <div class="card bg-base-100 shadow-xl">
+          <figure><img src="./images/others/latest1.png" alt="Ducati XIAMEN S-73" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Ducati XIAMEN S-73</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quam officia sed repellendus pariatur ipsa sunt iusto repudiandae veritatis explicabo! Aut, eos! Ipsa repellat vel, eos ab ad voluptates blanditiis.</p>
+               <div class="card-actions justify-end">
+              <button class="btn bg-bike-primary text-white">Read More</button>
+            </div>
+          </div>
+        </div>
+   <!-- 2nd card -->
+          <div class="card bg-base-100 shadow-xl">
+          <figure><img src="./images/others/latest2.png" alt="Motorcycles & Scooters" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Motorcycles & Scooters</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quam officia sed repellendus pariatur ipsa sunt iusto repudiandae veritatis explicabo! Aut, eos! Ipsa repellat vel, eos ab ad voluptates blanditiis.</p>
+               <div class="card-actions justify-end">
+              <button class="btn bg-bike-primary text-white">Read More</button>
+            </div>
+          </div>
+        </div>
+   <!-- 3rd card -->
+          <div class="card bg-base-100 shadow-xl">
+          <figure><img src="./images/others/latest3.png" alt="2021 Honda CBR500R" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">2021 Honda CBR500R</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quam officia sed repellendus pariatur ipsa sunt iusto repudiandae veritatis explicabo! Aut, eos! Ipsa repellat vel, eos ab ad voluptates blanditiis.</p>
+               <div class="card-actions justify-end">
+              <button class="btn bg-bike-primary text-white">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+     
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>
